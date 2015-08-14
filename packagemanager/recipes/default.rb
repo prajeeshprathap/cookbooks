@@ -16,3 +16,9 @@ powershell_script 'Add Chocolatey Source' do
   Register-PackageSource –provider Chocolatey –name AzureChoco –location http://prajeeshchoco.azurewebsites.net/nuget
   EOH
 end
+
+powershell_script 'Install Foxe' do
+  code <<-EOH
+  Install-Package -Name Foxe -force -RequiredVersion 1.2.0 -Source AzureChoco
+  EOH
+end
