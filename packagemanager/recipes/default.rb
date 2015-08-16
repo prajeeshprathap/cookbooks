@@ -12,8 +12,9 @@ chocolatey 'PowerShell' do
 end
 
 dsc_resource 'FoxePackage' do
-	resource 'xPackageManagement'
-	name 'Foxe'
-	source 'http://prajeeshchoco.azurewebsites.net/'
-	version '1.2.0'
+	resource :xPackageManagement
+	property :name, 'Foxe'
+	property :source, 'http://prajeeshchoco.azurewebsites.net/'
+	property :version, '1.2.0'
+	property :ensure, 'Present'
 end
