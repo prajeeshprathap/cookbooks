@@ -14,7 +14,7 @@ end
 dsc_resource 'FoxePackage' do
 	resource :xPackageManagement
 	property :name, 'Foxe'
-	property :source, 'http://prajeeshchoco.azurewebsites.net/'
+	property :source, 'http://prajeeshchoco.azurewebsites.net/nuget/'
 	property :version, '1.2.0'
 	property :ensure, 'Present'
 end
