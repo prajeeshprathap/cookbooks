@@ -11,6 +11,13 @@ chocolatey 'PowerShell' do
 	args "-pre"
 end
 
+dsc_resource 'AzureChocolateySource' do
+	resource :xChocolateySource
+	property :name, 'AzureChoco'
+	property :location, 'http://prajeeshchoco.azurewebsites.net/nuget/'
+	property :ensure, 'Present'
+end
+
 dsc_resource 'FoxePackage' do
 	resource :xPackageManagement
 	property :name, 'Foxe'
